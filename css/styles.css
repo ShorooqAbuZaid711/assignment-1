@@ -20,6 +20,21 @@ header{
     color: #f9f9f9;
 }
 
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#greeting {
+  animation: slide-up 1s ease-out;
+}
+
 h2{
     padding-bottom: 4px;
     border-bottom:2px solid #ccc;
@@ -143,21 +158,6 @@ footer{
     button {
         width: 100%;     
     }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#greeting {
-  animation: slide-up 1s ease-out;
 }
 
 /* Mobile screens */
