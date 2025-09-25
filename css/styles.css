@@ -1,68 +1,74 @@
-
+/*   Reset and Global Styles    */
 *{
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
-
+   box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
 body{
     font-family: sans-serif, Arial, Helvetica;
-    line-height: 1.5;
+    line-height: 1.5;       /* Improves readability */
     background-color: #f9f9f9;
     align-content: center;
 }
 
+/*  Header Styles   */
 header{
     background-color: #1a2a40;
-    padding: 2rem;
+    padding: 2rem;           /* Spacing inside the header */
     text-align: center;
     color: #f9f9f9;
 }
 
+/*    Greeting Animation   */
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px); /* Start slightly below */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0);    /* End at normal position */
   }
 }
 
 #greeting {
-  animation: slide-up 1s ease-out;
+  animation: slide-up 1s ease-out; /* Apply slide-up effect */
 }
 
+/*    Section Headings    */
 h2{
     padding-bottom: 4px;
-    border-bottom:2px solid #ccc;
+    border-bottom:2px solid #ccc; /* Underline for headings */
 }
 
+/*    Navigation Menu    */
 nav ul{
     line-height: 2.5;
-    display: flex;
+    display: flex;             /* Horizontal layout */
     align-items: center;
-    gap: 2.0rem;
-    list-style: none;
-    justify-content: center;
+    gap: 2.0rem;               /* Spacing between items */
+    list-style: none;          /* Remove bullets */
+    justify-content: center;   /* Center the menu */
 }
 
 nav ul li a{
-    text-decoration: none;
+    text-decoration: none;     
     font-weight: 450;
     color: #f9f9f9;
 }
 
+/* Link Styles */
 a{
     color: #f9f9f9;
     text-decoration: none;
 }
+
 a:hover {
-    color: #00bfa6;
+    color: #00bfa6; /* Hover color */
 }
 
+/*    Button Styles    */
 button{
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
@@ -76,9 +82,10 @@ button{
 
 button:hover{
     background-color: #00bfa6;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
+/*    Section and Div Styling    */
 section{
     background-color: #f1f1f1;
     padding: 2rem;
@@ -87,6 +94,7 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s; 
 }
+
 div{
     background-color: #f1f1f1;
     padding: 1.5rem;
@@ -97,9 +105,10 @@ div{
 div:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
     transition: box-shadow 0.3s; 
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
+/* Project Images */
 div img{
     background-color: #f1f1f1;
     margin: 2px;
@@ -107,6 +116,7 @@ div img{
     border-radius: 8px;               
 }
 
+/*    Form Styles    */
 input, textarea{
     width: 100%;                  
     padding: 0.75rem;             
@@ -126,6 +136,7 @@ textarea:focus{
     outline: none;               
 }
 
+/*    Footer Styles    */
 footer{
     padding-top: 2rem;
     padding-left: 1rem;
@@ -135,10 +146,10 @@ footer{
     text-align: center;
 }
 
-/* Tablet screens */
+/*    Responsive Styles - Tablet    */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; 
+        flex-direction: column; /* Stack nav links vertically */
         gap: 1rem;
     }
 
@@ -156,11 +167,11 @@ footer{
     }
 
     button {
-        width: 100%;     
+        width: 100%;     /* Full-width buttons on tablets */
     }
 }
 
-/* Mobile screens */
+/*    Responsive Styles - Mobile    */
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
@@ -181,7 +192,6 @@ footer{
     }
 
     input, textarea {
-        font-size: 0.9rem; 
+        font-size: 0.9rem; /* Smaller font for mobile forms */
     }
 }
-
